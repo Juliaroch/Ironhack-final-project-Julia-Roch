@@ -106,3 +106,8 @@ venv.bak/
 # OS stuff:
 .DS_Store
 .idea
+
+#My project stuff:
+data_images/
+C
+.idea
