@@ -1,4 +1,4 @@
-# Convolutional Neural Network to predict the artist behind a painting
+# CNN to predict the artist behind a painting
 
 This is the README from my final project from Ironhack's data analytics bootcamp. My project is a neural network that predicts the artist that has done a painting, the dataset was obtained from Kaggle. This dataset contained a list of the 50 most influential artists, my neural network predicts for 11 artists out of the 50 existing in the dataset, because these are the ones that had larger amounts of paintings to train with. 
 
