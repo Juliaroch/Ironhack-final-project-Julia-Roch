@@ -1,25 +1,15 @@
-# Data Project README file
+# Convolutional Neural Network to predict the artist behind a painting
 
-The README file describes the essence of the project playing the most important role. Most visitors will simply scroll down about twice on the README and leave if they are not interested. So, the README file should provide the reason **why** to checkout your project!!!). 
-Bearing that in mind, your job is to: 
-- Tell them what it is (with context).
-- Show them what it looks like in action.
-- Show them how they use it.
-- Tell them any other relevant details.
+This is the README from my final project from Ironhack's data analytics bootcamp. My project is a neural network that predicts the artist that has done a painting, the dataset was obtained from Kaggle. This dataset contained a list of the 50 most influential artists, my neural network predicts for 11 artists out of the 50 existing in the dataset, because these are the ones that had larger amounts of paintings to train with. 
 
-![Image](https://res.cloudinary.com/springboard-images/image/upload/q_auto,f_auto,fl_lossy/wordpress/2019/05/aiexcerpt.png)
+
+![Image](https://es.wikipedia.org/wiki/La_noche_estrellada#/media/Archivo:La_noche_estrellada1.jpg)
 
 ---
 
-## **Formatting**
-Your readers will most likely view your README in a browser so please keep that in mind when formatting its content: 
-- Use proper format when necesary (e.g.: `import pandas as pd`). 
-- Categorize content using two or three levels of header beneath. 
-- Make use of **emphasis** to call out important words. 
-- Link to project pages for related libraries you mention. Link to Wikipedia, Wiktionary, even Urban Dictionary definitions for words of which a reader may not be familiar. Make amusing cultural references. 
-- Add links to related projects or services. 
+## **Dataset**
 
-> Here you have a markdown cheatsheet [Link](https://commonmark.org/help/) and tutorial [Link](https://commonmark.org/help/tutorial/).
+https://www.kaggle.com/ikarus777/best-artworks-of-all-time/kernels
 
 
 ## **Start writing ASAP:**
