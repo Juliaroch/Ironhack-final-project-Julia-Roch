@@ -109,6 +109,6 @@ venv.bak/
 
 #My project stuff:
 data_images/
-data/results/first_attempt
+data/results/
 C
 .idea
