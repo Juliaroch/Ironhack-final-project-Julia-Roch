@@ -18,22 +18,21 @@ data_artists = pd.read_csv('../data/processed/data_artists.csv')
 artists_top_name = data_artists['name'].str.replace(' ', '_').values
 train_input_shape = (128, 128, 3)
 n_classes = artists_top_name.shape[0]
+n=10
+train_datagen=ImageDataGenerator(rescale=1./255.,horizontal_flip=True,vertical_flip=True)
+train_generator=train_datagen.flow_from_directory(directory=images,class_mode='categorical',target_size=train_input_shape,shuffle=True,classes=artists_top_name.tolist())
 
-def get_images(images):
-    train_datagen=ImageDataGenerator(rescale=1./255.,horizontal_flip=True,vertical_flip=True)
-    train_generator=train_datagen.flow_from_directory(directory=images,class_mode='categorical',target_size=train_input_shape,shuffle=True,classes=artists_top_name.tolist())
-    return train_generator
 
 model = load_model('../data/results/my_model170420RNv3.h5')
 
-n =10
-fig, axes = plt.subplots(1, n, figsize=(25,10))
 
-def demo(train_generator,n):
+fig, axes = plt.subplots(n, 1, figsize=(50,50))
+
+def demo(n, images, train_generator):
     for i in range(n):
         random_artist = random.choice(artists_top_name)
-        random_image = random.choice(os.listdir(os.path.join(images_dir, random_artist)))
-        random_image_file = os.path.join(images_dir, random_artist, random_image)
+        random_image = random.choice(os.listdir(os.path.join(images, random_artist)))
+        random_image_file = os.path.join(images, random_artist, random_image)
 
     # Original image
         test_image = image.load_img(random_image_file, target_size=(train_input_shape))
@@ -52,10 +51,15 @@ def demo(train_generator,n):
     
         title = "Actual artist = {}\nPredicted artist = {}\nPrediction probability = {:.2f} %".format(random_artist.replace('_', ' '), labels[prediction_idx].replace('_', ' '),prediction_probability*100)
         # Print image
-        axes[i].imshow(plt.imread(random_image_file))
-        axes[i].set_title(title)
+        axes[i].imshow(plt.imread(random_image_file), label='title')
+        #axes[i].set_title(title,'horizontalAlignment', 'right')
+        #axes[i].set_ylabel(title)
         axes[i].axis('off')
-
-        plt.show()
+        axes[i].text(1200,200, s=title, fontsize=20) 
+        plt.subplots_adjust(right=0.75)
+        
+        plt.savefig('../data/results/images_prediction.pdf')
 
     return plt.savefig('../data/results/images_prediction.pdf')
+
+demo(n, images, train_generator)
