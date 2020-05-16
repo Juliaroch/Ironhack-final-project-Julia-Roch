@@ -1,4 +1,4 @@
-# CNN to predict the artist behind a painting
+# ART-ificial intelligence: CNN to predict the artist behind a painting
 
 This is the README from my final project from Ironhack's data analytics bootcamp. My project is a neural network that predicts the artist that has done a painting, the dataset was obtained from Kaggle. This dataset contained a list of the 50 most influential artists, my neural network predicts for 11 artists out of the 50 existing in the dataset, because these are the ones that had larger amounts of paintings to train with. 
 
@@ -9,35 +9,28 @@ This is the README from my final project from Ironhack's data analytics bootcamp
 
 ## **Dataset**
 
-https://www.kaggle.com/ikarus777/best-artworks-of-all-time/kernels
+https://www.kaggle.com/ikarus777/best-artworks-of-all-time
 
 
-## **Start writing ASAP:**
-*Last but not least, by writing your README soon you give yourself some pretty significant advantages. Most importantly, you’re giving yourself a chance to think through the project without the overhead of having to change code every time you change your mind about how something should be organized or what should be included.*
+### :raising_hand: **ART-ificial intelligence** 
+ART-ificial intelligence: this project is a mix of art and science, I have trained with almost 3000 artworks my CNN network, using as the pretrained architecture ResNet50. Finally, achieving an 83% of accuracy. 
 
-
-## **Suggested Structure:**
-
-### :raising_hand: **Name** 
-Self-explanatory names are best. If the name sounds too vague or unrelated, it may be a signal to move on. It also must be catchy. Images, Logo, Gif or some color is strongly recommended.
-
-### :baby: **Status**
-Alpha, Beta, 1.1, Ironhack Data Analytics Final Project, etc... It's OK to write a sentence, too. The goal is to let interested people know where this project is at.
-
-### :running: **One-liner**
-Having a one-liner that describes the pipeline/api/app is useful for getting an idea of what your code does in slightly greater detail. 
+### :running: **Demo-pipeline**
+My code needs 2 input arguments, the folder where you have stored the artwork images' and the number of artworks that you want the network to predict 
 
 ### :computer: **Technology stack**
-Python, Pandas, Scipy, Scikit-learn, etc. Indicate the technological nature of the software, including primary programming language(s), main libraries and whether the software is intended as standalone or as a module in a framework or other ecosystem.
+Python, Pandas, Scipy, Scikit-learn, Keras, Tensorflow, Matplotlib and Seaborn. The training of the network was developed in Colab-Pro as the images used where too large to work with in a standard laptop.
 
 ### :boom: **Core technical concepts and inspiration**
-Why does it exist? Frame your project for the potential user. Compare/contrast your project with other, similar projects so the user knows how it is different from those projects. Highlight the technical concepts that your project demonstrates or supports. Keep it very brief.
+The inspiration comes from my personal experience being a person with a non-science background and doing a Data Analytics bootcamp, thus experiencing myself the mix of art and science.
+ 
+This CNN predicts the author behind an artwork, there are other projects that predict the type of art where each artwork belongs, but my project is focused on predicting the painter and differenciating the style that each painter has.
 
 ### :wrench: **Configuration**
-Requeriments, prerequisites, dependencies, installation instructions.
+Requeriments: all libraries described in technology stack and computer with graphical memory to run the CNN
 
 ### :see_no_evil: **Usage**
-Parameters, return values, known issues, thrown errors.
+Parameters: p-path_to_images_folder & n-number of predictions
 
 ### :file_folder: **Folder structure**
 ```
@@ -60,30 +53,14 @@ Parameters, return values, known issues, thrown errors.
         └── results
 ```
 
-> Do not forget to include `__trash__` and `.env` in `.gitignore` 
-
 ### :shit: **ToDo**
-Next steps, features planned, known bugs (shortlist).
+Next steps: improve actual accuracy, include new painters and their artworks in the network.
 
 ### :information_source: **Further info**
-Credits, alternatives, references, license.
+Credits: kernel from the dataset in Kaggle (https://www.kaggle.com/supratimhaldar/deepartist-identify-artist-from-art).
 
 ### :love_letter: **Contact info**
-Getting help, getting involved, hire me please.
+Mail: juliafroch@gmail.com Getting help, getting involved, hire me please.
 
 ---
-
-> Here you have some repo examples:
-- [Mamba (OCR-Translator-Assistant)](https://github.com/YonatanRA/OCR-translator-assistant-project)
-- [Art Classification](https://github.com/serguma/art_classification)
-- [OSNet-IBN (width x 1.0) Lite](https://github.com/RodMech/OSNet-IBN1-Lite)
-- [Movie Founder](https://github.com/Alfagu/final-project-Ironhack-0419mad)
-- [Convolutional Neural Network to detect Pneumonia](https://github.com/jmolins89/final-project)
-- [Brain tumor detection project](https://github.com/alonsopdani/brain-tumor-detection-project)
-- [Policy-Gradient-Methods](https://github.com/cyoon1729/Policy-Gradient-Methods)
-
-> Here you have some tools and references:
-- [Make a README](https://www.makeareadme.com/)
-- [Awesome README](https://github.com/matiassingers/awesome-readme)
-- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
