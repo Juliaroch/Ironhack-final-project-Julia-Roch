@@ -41,12 +41,18 @@ Parameters: p-path_to_images_folder & n-number of predictions
     ├── requeriments.txt
     ├── README.md
     ├── main_script.py
+    ├── p_acquisition
+    ├── p_analysis
+    ├── p_reporting
     ├── notebooks
-    │   ├── notebook1.ipynb
-    │   └── notebook2.ipynb
+    │   ├── acquisition.ipynb
+    │   ├── analysis.ipynb
+    │   ├── training.ipynb
+    │   └── demo.ipynb
     ├── package1
-    │   ├── module1.py
-    │   └── module2.py
+    │   ├── acquisition.py
+    │   ├── plots.py
+    │   └── demo.py
     └── data
         ├── raw
         ├── processed

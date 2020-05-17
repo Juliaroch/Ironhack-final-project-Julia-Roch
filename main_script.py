@@ -1,26 +1,20 @@
+#main.py
 import argparse
-from p_acquisition import m_acquisition as mac
-from p_wrangling import m_wrangling as mwr
-from p_analysis import m_analysis as man 
-from p_reporting import m_reporting as mre 
+#from plots import plots
+from demo import demo
 
-def argument_parser():
-    parser = argparse.ArgumentParser(description = 'Set chart type')
-    parser.add_argument("-b", "--bar", help="Produce a barplot", action="store_true")
-    parser.add_argument("-l", "--line", help="Produce a lineplot", action="store_true")
-    args = parser.parse_args()
-    return args
-
-def main(some_args):
-    data = mac.acquire()
-    filtered = mwr.wrangle(data, year)
-    results = man.analyze(filtered)
-    fig = mre.plotting_function(results, title, arguments)
-    mre.save_viz(fig, title)
-    print('========================= Pipeline is complete. You may find the results in the folder ./data/results =========================')
+def main(path_name, n):
+    #x, y = plots(n)
+    demo(path_name, n)
+    
 
 if __name__ == '__main__':
-    year = int(input('Enter the year: '))
-    title = 'Top 10 Manufacturers by Fuel Efficiency ' + str(year)
-    arguments = argument_parser()
-    main(arguments)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-p', '--path', dest='path_to_images', default=None, required=True, type=str, help="""Please provide the path for your paintings:""")
+    parser.add_argument('-n', '--number', dest='number_predictions', default=None, required=True, choices=range(0, 100), type=int, help="""Please provide the number of predictions you would like to make:""")
+    args = parser.parse_args()
+    path_name = args.path_to_images
+    n = args.number_predictions
+    print('''ART-ificial intelligence is working on mixing science and art, it won't take very long...''')
+
+    main(path_name, n)
